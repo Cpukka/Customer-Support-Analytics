@@ -16,7 +16,7 @@ services:
   backend:
     build: ./backend/CustomerSupportAPI
     environment:
-      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=customersupportdb;Username=support_admin;Password=Ubo@1234
+      - ConnectionStrings__DefaultConnection=Host=reseau.proxy.rlwy.net;Port=28372;Database=railway;Username=postgres;Password=DWcIpfFwXmYEyTrQkihmguRHYCqOTeDM;SSL Mode=Require;Trust Server Certificate=true;Maximum Pool Size=100;Minimum Pool Size=10;Connection Idle Lifetime=300;Connection Lifetime=600;
       - AIService__Url=http://aiservice:8000
     ports:
       - "5000:8080"
