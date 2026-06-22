@@ -1641,3 +1641,20 @@ Object name: 'ApplicationDbContext'.
 2026-06-22 17:58:59.799 +01:00 [INF] HTTP GET /health started at "2026-06-22T16:58:59.7788826Z"
 2026-06-22 17:59:00.103 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-22T16:59:00.1030593Z"
 2026-06-22 17:59:00.243 +01:00 [INF] HTTP GET /health completed with 200 in 464.0546ms
+2026-06-22 17:59:04.375 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 200 in 4272.5325ms
+2026-06-22 17:59:04.385 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-22T16:59:04.3858532Z"
+2026-06-22 17:59:04.616 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 200 in 230.9839ms
+2026-06-22 17:59:26.734 +01:00 [INF] HTTP POST /api/tickets/upload started at "2026-06-22T16:59:26.7342728Z"
+2026-06-22 17:59:27.061 +01:00 [INF] Ticket 11 created successfully
+2026-06-22 17:59:27.124 +01:00 [INF] HTTP POST /api/tickets/upload completed with 201 in 389.9501ms
+2026-06-22 17:59:27.147 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-22T16:59:27.1470896Z"
+2026-06-22 17:59:27.164 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 200 in 17.5887ms
+2026-06-22 17:59:29.789 +01:00 [ERR] Failed to analyze ticket 11
+System.ObjectDisposedException: Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling 'Dispose' on the context instance, or wrapping it in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
+Object name: 'ApplicationDbContext'.
+   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.EntryWithoutDetectChanges(TEntity entity)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at CustomerSupportAPI.Controllers.TicketsController.AnalyzeTicketWithAI(Ticket ticket) in C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\Controllers\TicketsController.cs:line 401
