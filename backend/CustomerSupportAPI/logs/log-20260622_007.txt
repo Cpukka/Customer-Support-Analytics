@@ -1,0 +1,3 @@
+2026-06-22 17:58:59.799 +01:00 [INF] HTTP GET /health started at "2026-06-22T16:58:59.7788826Z"
+2026-06-22 17:59:00.103 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-22T16:59:00.1030593Z"
+2026-06-22 17:59:00.243 +01:00 [INF] HTTP GET /health completed with 200 in 464.0546ms

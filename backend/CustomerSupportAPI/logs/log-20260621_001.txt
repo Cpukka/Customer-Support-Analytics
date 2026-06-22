@@ -1,0 +1,181 @@
+2026-06-21 21:03:34.283 +01:00 [INF] HTTP GET /api/tickets started at "2026-06-21T20:03:34.2698873Z"
+2026-06-21 21:03:35.434 +01:00 [INF] HTTP GET /api/tickets completed with 404 in 1163.9684ms
+2026-06-21 21:03:45.145 +01:00 [INF] HTTP GET /api/tickets started at "2026-06-21T20:03:45.1452489Z"
+2026-06-21 21:03:45.260 +01:00 [INF] HTTP GET /api/tickets completed with 404 in 115.2456ms
+2026-06-21 21:04:35.946 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-21T20:04:35.9465017Z"
+2026-06-21 21:04:36.343 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 404 in 397.1354ms
+2026-06-21 21:09:35.819 +01:00 [INF] HTTP GET /api/tickets started at "2026-06-21T20:09:35.8192598Z"
+2026-06-21 21:09:36.328 +01:00 [INF] HTTP GET /api/tickets completed with 404 in 508.599ms
+2026-06-21 21:13:28.365 +01:00 [INF] HTTP GET /api/tickets started at "2026-06-21T20:13:28.3534692Z"
+2026-06-21 21:13:51.379 +01:00 [INF] HTTP GET /api/Test/health started at "2026-06-21T20:13:51.3791802Z"
+2026-06-21 21:13:53.635 +01:00 [ERR] HTTP GET /api/tickets failed after 25281.6728ms
+2026-06-21 21:13:53.682 +01:00 [ERR] An unhandled exception occurred
+System.Text.Json.JsonException: A possible object cycle was detected. This can either be due to a cycle or if the object depth is larger than the maximum allowed depth of 32. Consider using ReferenceHandler.Preserve on JsonSerializerOptions to support cycles. Path: $.data.Customer.Tickets.Customer.Tickets.Customer.Tickets.Customer.Tickets.Customer.Tickets.Customer.Tickets.Customer.Tickets.Customer.Tickets.Customer.Tickets.Customer.Tickets.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_SerializerCycleDetected(Int32 maxDepth)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.ListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at CustomerSupportAPI.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\Middleware\RequestLoggingMiddleware.cs:line 28
+   at CustomerSupportAPI.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\Middleware\ErrorHandlingMiddleware.cs:line 21
+2026-06-21 21:13:56.993 +01:00 [INF] HTTP GET /api/Test/health completed with 200 in 5614.3763ms
+2026-06-21 21:14:38.179 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-21T20:14:38.1799211Z"
+2026-06-21 21:14:38.960 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 200 in 780.7391ms
+2026-06-21 21:57:20.496 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-21T20:57:20.4706845Z"
+2026-06-21 21:57:20.504 +01:00 [INF] HTTP GET /api/health started at "2026-06-21T20:57:20.4772168Z"
+2026-06-21 21:57:22.661 +01:00 [INF] HTTP GET /api/health completed with 404 in 2184.6764ms
+2026-06-21 21:57:40.876 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 200 in 20405.7489ms
+2026-06-21 22:01:10.124 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-21T21:01:10.1245185Z"
+2026-06-21 22:01:10.491 +01:00 [INF] HTTP GET /api/health started at "2026-06-21T21:01:10.4912177Z"
+2026-06-21 22:01:10.703 +01:00 [INF] HTTP GET /api/health completed with 404 in 211.9654ms
+2026-06-21 22:01:11.490 +01:00 [INF] HTTP GET /health started at "2026-06-21T21:01:11.4905241Z"
+2026-06-21 22:01:12.292 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 200 in 2168.0742ms
+2026-06-21 22:01:16.846 +01:00 [INF] HTTP GET /health completed with 200 in 5356.3149ms
+2026-06-21 22:01:41.959 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-21T21:01:41.8954263Z"
+2026-06-21 22:01:41.995 +01:00 [INF] HTTP GET /api/health started at "2026-06-21T21:01:41.9250898Z"
+2026-06-21 22:01:42.445 +01:00 [INF] HTTP GET /api/health completed with 404 in 520.5949ms
+2026-06-21 22:01:43.860 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 200 in 1965.1467ms
+2026-06-21 22:01:52.715 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-21T21:01:52.7154650Z"
+2026-06-21 22:01:52.715 +01:00 [INF] HTTP GET /api/health started at "2026-06-21T21:01:52.7157629Z"
+2026-06-21 22:01:52.876 +01:00 [INF] HTTP GET /api/health completed with 404 in 160.6289ms
+2026-06-21 22:01:53.144 +01:00 [INF] HTTP GET /health started at "2026-06-21T21:01:53.1441492Z"
+2026-06-21 22:01:53.448 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 200 in 733.1895ms
+2026-06-21 22:01:56.319 +01:00 [INF] HTTP GET /health completed with 200 in 3175.8036ms
+2026-06-21 22:02:22.808 +01:00 [INF] HTTP GET /api/health started at "2026-06-21T21:02:22.8083326Z"
+2026-06-21 22:02:22.818 +01:00 [INF] HTTP GET /api/health completed with 404 in 9.6724ms
+2026-06-21 22:02:22.849 +01:00 [INF] HTTP GET /health started at "2026-06-21T21:02:22.8495592Z"
+2026-06-21 22:02:23.345 +01:00 [INF] HTTP GET /health completed with 200 in 496.0466ms
+2026-06-21 22:02:52.454 +01:00 [INF] HTTP GET /api/health started at "2026-06-21T21:02:52.4542232Z"
+2026-06-21 22:02:53.094 +01:00 [INF] HTTP GET /api/health completed with 404 in 639.9371ms
+2026-06-21 22:02:57.487 +01:00 [INF] HTTP GET /health started at "2026-06-21T21:02:57.4875482Z"
+2026-06-21 22:02:58.994 +01:00 [INF] HTTP GET /health completed with 200 in 1506.5125ms
+2026-06-21 22:03:24.890 +01:00 [INF] HTTP GET /api/health started at "2026-06-21T21:03:24.8898469Z"
+2026-06-21 22:03:25.373 +01:00 [INF] HTTP GET /api/health completed with 404 in 483.4956ms
+2026-06-21 22:03:28.497 +01:00 [INF] HTTP GET /health started at "2026-06-21T21:03:28.4975878Z"
+2026-06-21 22:03:30.558 +01:00 [INF] HTTP GET /health completed with 200 in 2061.2524ms
+2026-06-21 22:03:54.608 +01:00 [INF] HTTP GET /api/health started at "2026-06-21T21:03:54.6081992Z"
+2026-06-21 22:03:54.713 +01:00 [INF] HTTP GET /api/health completed with 404 in 105.3541ms
+2026-06-21 22:03:56.903 +01:00 [INF] HTTP GET /health started at "2026-06-21T21:03:56.9030792Z"
+2026-06-21 22:03:57.623 +01:00 [INF] HTTP GET /health completed with 200 in 720.5376ms
+2026-06-21 22:04:22.626 +01:00 [INF] HTTP GET /api/health started at "2026-06-21T21:04:22.6261266Z"
+2026-06-21 22:04:22.643 +01:00 [INF] HTTP GET /api/health completed with 404 in 17.5905ms
+2026-06-21 22:04:30.026 +01:00 [INF] HTTP GET /health started at "2026-06-21T21:04:30.0265211Z"
+2026-06-21 22:04:37.327 +01:00 [INF] HTTP GET /health completed with 200 in 7300.543ms
+2026-06-21 22:04:52.752 +01:00 [INF] HTTP GET /api/health started at "2026-06-21T21:04:52.7521439Z"
+2026-06-21 22:04:52.766 +01:00 [INF] HTTP GET /api/health completed with 404 in 14.7202ms
+2026-06-21 22:04:52.791 +01:00 [INF] HTTP GET /health started at "2026-06-21T21:04:52.7911572Z"
+2026-06-21 22:04:54.057 +01:00 [INF] HTTP GET /health completed with 200 in 1266.2808ms
+2026-06-21 22:05:22.327 +01:00 [INF] HTTP GET /api/health started at "2026-06-21T21:05:22.3272686Z"
+2026-06-21 22:05:22.397 +01:00 [INF] HTTP GET /api/health completed with 404 in 69.8205ms
+2026-06-21 22:05:22.552 +01:00 [INF] HTTP GET /health started at "2026-06-21T21:05:22.5520695Z"
+2026-06-21 22:05:22.774 +01:00 [INF] HTTP GET /health completed with 200 in 222.5839ms
+2026-06-21 22:05:52.451 +01:00 [INF] HTTP GET /api/health started at "2026-06-21T21:05:52.4515192Z"
+2026-06-21 22:05:52.469 +01:00 [INF] HTTP GET /api/health completed with 404 in 18.3962ms
+2026-06-21 22:05:52.500 +01:00 [INF] HTTP GET /health started at "2026-06-21T21:05:52.5006734Z"
+2026-06-21 22:05:52.600 +01:00 [INF] HTTP GET /health completed with 200 in 99.5891ms

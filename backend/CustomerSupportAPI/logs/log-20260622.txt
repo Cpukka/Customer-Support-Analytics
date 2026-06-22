@@ -1,0 +1,104 @@
+2026-06-22 09:05:11.688 +01:00 [INF] HTTP GET /health started at "2026-06-22T08:05:11.4876147Z"
+2026-06-22 09:05:14.916 +01:00 [ERR] HTTP GET /health failed after 3428.3092ms
+2026-06-22 09:05:15.754 +01:00 [ERR] An unhandled exception occurred
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService.CheckHealthAsync(Func`2 predicate, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.HealthChecks.HealthCheckMiddleware.InvokeAsync(HttpContext httpContext)
+   at CustomerSupportAPI.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\Middleware\RequestLoggingMiddleware.cs:line 28
+   at CustomerSupportAPI.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\Middleware\ErrorHandlingMiddleware.cs:line 21
+2026-06-22 09:05:36.389 +01:00 [INF] HTTP GET /health started at "2026-06-22T08:05:36.3894890Z"
+2026-06-22 09:05:39.333 +01:00 [INF] HTTP GET /health completed with 200 in 2944.0377ms
+2026-06-22 09:06:06.373 +01:00 [INF] HTTP GET /health started at "2026-06-22T08:06:06.3736886Z"
+2026-06-22 09:06:06.568 +01:00 [INF] HTTP GET /health completed with 200 in 194.5383ms
+2026-06-22 09:06:36.667 +01:00 [INF] HTTP GET /health started at "2026-06-22T08:06:36.6675852Z"
+2026-06-22 09:06:36.888 +01:00 [INF] HTTP GET /health completed with 200 in 220.6729ms
+2026-06-22 09:06:50.772 +01:00 [INF] HTTP GET /health started at "2026-06-22T08:06:50.7729109Z"
+2026-06-22 09:06:50.776 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-22T08:06:50.7762267Z"
+2026-06-22 09:06:50.925 +01:00 [INF] HTTP GET /health completed with 200 in 152.7158ms
+2026-06-22 09:07:13.627 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 200 in 22851.5907ms
+2026-06-22 09:07:21.379 +01:00 [INF] HTTP GET /health started at "2026-06-22T08:07:21.3794465Z"
+2026-06-22 09:07:21.487 +01:00 [INF] HTTP GET /health completed with 200 in 107.5507ms
+2026-06-22 09:07:51.381 +01:00 [INF] HTTP GET /health started at "2026-06-22T08:07:51.3813098Z"
+2026-06-22 09:07:51.492 +01:00 [INF] HTTP GET /health completed with 200 in 110.7263ms
+2026-06-22 09:08:21.373 +01:00 [INF] HTTP GET /health started at "2026-06-22T08:08:21.3729672Z"
+2026-06-22 09:08:21.484 +01:00 [INF] HTTP GET /health completed with 200 in 111.0164ms
+2026-06-22 09:08:51.378 +01:00 [INF] HTTP GET /health started at "2026-06-22T08:08:51.3788319Z"
+2026-06-22 09:08:51.546 +01:00 [INF] HTTP GET /health completed with 200 in 167.8722ms
+2026-06-22 09:09:21.383 +01:00 [INF] HTTP GET /health started at "2026-06-22T08:09:21.3831049Z"
+2026-06-22 09:09:21.568 +01:00 [INF] HTTP GET /health completed with 200 in 184.9006ms
+2026-06-22 09:09:51.467 +01:00 [INF] HTTP GET /health started at "2026-06-22T08:09:51.4672430Z"
+2026-06-22 09:09:57.666 +01:00 [ERR] Health check ApplicationDbContext with status "Unhealthy" completed after 6139.6366ms with message 'null'
+2026-06-22 09:09:58.146 +01:00 [INF] HTTP GET /health completed with 503 in 6679.6771ms
+2026-06-22 09:10:26.511 +01:00 [INF] HTTP GET /health started at "2026-06-22T08:10:26.5119341Z"
+2026-06-22 09:10:28.791 +01:00 [INF] HTTP GET /health completed with 200 in 2279.232ms
+2026-06-22 09:11:26.389 +01:00 [INF] HTTP GET /health started at "2026-06-22T08:11:26.3892693Z"
+2026-06-22 09:11:26.491 +01:00 [INF] HTTP GET /health completed with 200 in 102.5292ms
+2026-06-22 09:12:28.147 +01:00 [INF] HTTP GET /health started at "2026-06-22T08:12:28.1474861Z"
+2026-06-22 09:12:28.667 +01:00 [INF] HTTP GET /health completed with 200 in 519.569ms
+2026-06-22 09:13:26.402 +01:00 [INF] HTTP GET /health started at "2026-06-22T08:13:26.4022592Z"
+2026-06-22 09:13:26.500 +01:00 [INF] HTTP GET /health completed with 200 in 97.713ms
+2026-06-22 09:19:14.253 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-22T08:19:14.2532776Z"
+2026-06-22 09:19:14.276 +01:00 [INF] HTTP GET /health started at "2026-06-22T08:19:14.2766462Z"
+2026-06-22 09:19:24.307 +01:00 [INF] HTTP GET /health completed with 200 in 10031.2869ms
+2026-06-22 09:19:44.638 +01:00 [INF] HTTP GET /health started at "2026-06-22T08:19:44.6381980Z"
+2026-06-22 09:19:45.569 +01:00 [INF] HTTP GET /health completed with 200 in 930.832ms
+2026-06-22 09:19:48.951 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 200 in 34698.0453ms
+2026-06-22 09:20:14.377 +01:00 [INF] HTTP GET /health started at "2026-06-22T08:20:14.3777228Z"
+2026-06-22 09:20:14.849 +01:00 [INF] HTTP GET /health completed with 200 in 472.2323ms
+2026-06-22 09:20:44.375 +01:00 [INF] HTTP GET /health started at "2026-06-22T08:20:44.3752495Z"
+2026-06-22 09:20:47.888 +01:00 [INF] HTTP GET /health completed with 200 in 3513.4066ms
+2026-06-22 09:21:14.845 +01:00 [INF] HTTP GET /health started at "2026-06-22T08:21:14.8454677Z"
+2026-06-22 09:21:20.734 +01:00 [ERR] Health check ApplicationDbContext with status "Unhealthy" completed after 5841.753ms with message 'null'
+2026-06-22 09:21:21.209 +01:00 [INF] HTTP GET /health completed with 503 in 6363.8723ms
+2026-06-22 10:17:54.654 +01:00 [INF] HTTP GET /health started at "2026-06-22T09:17:54.6541486Z"
+2026-06-22 10:17:54.880 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-22T09:17:54.8806836Z"
+2026-06-22 10:18:00.844 +01:00 [INF] HTTP GET /health started at "2026-06-22T09:18:00.8445524Z"
+2026-06-22 10:18:00.845 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-22T09:18:00.8455832Z"
+2026-06-22 10:18:01.235 +01:00 [ERR] HTTP GET /health failed after 6580.986ms
+2026-06-22 10:18:01.880 +01:00 [ERR] HTTP GET /health failed after 1036.0021ms
+2026-06-22 10:18:02.531 +01:00 [ERR] An unhandled exception occurred
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService.CheckHealthAsync(Func`2 predicate, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.HealthChecks.HealthCheckMiddleware.InvokeAsync(HttpContext httpContext)
+   at CustomerSupportAPI.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\Middleware\RequestLoggingMiddleware.cs:line 28
+   at CustomerSupportAPI.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\Middleware\ErrorHandlingMiddleware.cs:line 21
+2026-06-22 10:18:02.531 +01:00 [ERR] An unhandled exception occurred
+System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at Microsoft.Extensions.Diagnostics.HealthChecks.DefaultHealthCheckService.CheckHealthAsync(Func`2 predicate, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Diagnostics.HealthChecks.HealthCheckMiddleware.InvokeAsync(HttpContext httpContext)
+   at CustomerSupportAPI.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\Middleware\RequestLoggingMiddleware.cs:line 28
+   at CustomerSupportAPI.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\Middleware\ErrorHandlingMiddleware.cs:line 21
+2026-06-22 10:18:17.370 +01:00 [INF] HTTP GET /health started at "2026-06-22T09:18:17.3699727Z"
+2026-06-22 10:18:17.593 +01:00 [INF] HTTP GET /health completed with 200 in 223.4081ms
+2026-06-22 10:18:18.706 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 200 in 23825.8912ms
+2026-06-22 10:18:18.706 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 200 in 17860.9916ms
+2026-06-22 10:18:47.417 +01:00 [INF] HTTP GET /health started at "2026-06-22T09:18:47.4172731Z"
+2026-06-22 10:18:47.671 +01:00 [INF] HTTP GET /health completed with 200 in 254.6442ms
+2026-06-22 10:19:17.379 +01:00 [INF] HTTP GET /health started at "2026-06-22T09:19:17.3797639Z"
+2026-06-22 10:19:17.628 +01:00 [INF] HTTP GET /health completed with 200 in 248.8941ms
+2026-06-22 10:19:47.406 +01:00 [INF] HTTP GET /health started at "2026-06-22T09:19:47.4062353Z"
+2026-06-22 10:19:47.544 +01:00 [INF] HTTP GET /health completed with 200 in 138.4486ms
+2026-06-22 10:20:18.324 +01:00 [INF] HTTP GET /health started at "2026-06-22T09:20:18.3240472Z"
+2026-06-22 10:20:18.596 +01:00 [INF] HTTP GET /health completed with 200 in 272.2944ms
+2026-06-22 10:20:47.369 +01:00 [INF] HTTP GET /health started at "2026-06-22T09:20:47.3698655Z"
+2026-06-22 10:20:47.472 +01:00 [INF] HTTP GET /health completed with 200 in 102.9808ms
+2026-06-22 10:21:26.390 +01:00 [INF] HTTP GET /health started at "2026-06-22T09:21:26.3905430Z"
+2026-06-22 10:21:26.690 +01:00 [INF] HTTP GET /health completed with 200 in 300.1245ms
+2026-06-22 10:22:26.622 +01:00 [INF] HTTP GET /health started at "2026-06-22T09:22:26.6229156Z"
+2026-06-22 10:22:26.960 +01:00 [INF] HTTP GET /health completed with 200 in 337.6781ms
+2026-06-22 10:23:26.402 +01:00 [INF] HTTP GET /health started at "2026-06-22T09:23:26.4027879Z"
+2026-06-22 10:23:27.513 +01:00 [INF] HTTP GET /health completed with 200 in 1111.0863ms
+2026-06-22 10:24:26.385 +01:00 [INF] HTTP GET /health started at "2026-06-22T09:24:26.3856012Z"
+2026-06-22 10:24:26.512 +01:00 [INF] HTTP GET /health completed with 200 in 126.9954ms
+2026-06-22 10:25:11.039 +01:00 [INF] HTTP GET /health started at "2026-06-22T09:25:11.0399450Z"
+2026-06-22 10:25:11.280 +01:00 [INF] HTTP GET /health completed with 200 in 240.1533ms
+2026-06-22 10:25:17.038 +01:00 [INF] HTTP GET /health started at "2026-06-22T09:25:17.0380742Z"
+2026-06-22 10:25:17.164 +01:00 [INF] HTTP GET /health completed with 200 in 125.898ms
+2026-06-22 10:25:30.853 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-22T09:25:30.8531583Z"
+2026-06-22 10:25:30.853 +01:00 [INF] HTTP GET /health started at "2026-06-22T09:25:30.8534791Z"
+2026-06-22 10:25:31.670 +01:00 [INF] HTTP GET /health completed with 200 in 816.5526ms
+2026-06-22 10:25:31.679 +01:00 [INF] HTTP GET /health started at "2026-06-22T09:25:31.6794616Z"
+2026-06-22 10:25:31.825 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 200 in 972.2135ms
+2026-06-22 10:25:31.837 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-22T09:25:31.8373971Z"
+2026-06-22 10:25:31.899 +01:00 [INF] HTTP GET /health completed with 200 in 219.9511ms
+2026-06-22 10:25:32.333 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 200 in 495.8427ms

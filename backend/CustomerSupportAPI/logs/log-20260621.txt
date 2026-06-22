@@ -1,0 +1,8 @@
+2026-06-21 21:03:34.283 +01:00 [INF] HTTP GET /api/tickets started at "2026-06-21T20:03:34.2698873Z"
+2026-06-21 21:03:35.434 +01:00 [INF] HTTP GET /api/tickets completed with 404 in 1163.9684ms
+2026-06-21 21:03:45.145 +01:00 [INF] HTTP GET /api/tickets started at "2026-06-21T20:03:45.1452489Z"
+2026-06-21 21:03:45.260 +01:00 [INF] HTTP GET /api/tickets completed with 404 in 115.2456ms
+2026-06-21 21:04:35.946 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-21T20:04:35.9465017Z"
+2026-06-21 21:04:36.343 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 404 in 397.1354ms
+2026-06-21 21:09:35.819 +01:00 [INF] HTTP GET /api/tickets started at "2026-06-21T20:09:35.8192598Z"
+2026-06-21 21:09:36.328 +01:00 [INF] HTTP GET /api/tickets completed with 404 in 508.599ms
