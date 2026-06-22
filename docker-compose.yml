@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: customersupportdb
+      POSTGRES_USER: support_admin
+      POSTGRES_PASSWORD: Ubo@1234
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+
+  backend:
+    build: ./backend/CustomerSupportAPI
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=customersupportdb;Username=support_admin;Password=Ubo@1234
+      - AIService__Url=http://aiservice:8000
+    ports:
+      - "5000:8080"
+    depends_on:
+      - postgres
+      - aiservice
+
+  aiservice:
+    build: ./ai-service
+    environment:
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=customersupportdb
+      - DB_USER=support_admin
+      - DB_PASSWORD=Ubo@1234
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+
+  frontend:
+    build: ./frontend
+    environment:
+      - NEXT_PUBLIC_API_URL=http://backend:5000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:

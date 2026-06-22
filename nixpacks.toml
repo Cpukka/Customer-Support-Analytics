@@ -1,0 +1,18 @@
+[phases.setup]
+nixPkgs = ["dotnet-sdk_8", "python311", "nodejs_20"]
+
+[phases.install]
+cmds = [
+  "cd backend/CustomerSupportAPI && dotnet restore",
+  "cd ai-service && pip install -r requirements.txt",
+  "cd frontend && npm install"
+]
+
+[phases.build]
+cmds = [
+  "cd backend/CustomerSupportAPI && dotnet publish -c Release -o /app/backend",
+  "cd frontend && npm run build"
+]
+
+[start]
+cmd = "cd /app/backend && dotnet CustomerSupportAPI.dll --urls http://0.0.0.0:$PORT"
