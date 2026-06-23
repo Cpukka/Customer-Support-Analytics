@@ -8,7 +8,12 @@ import os
 import logging
 import random
 from dotenv import load_dotenv
-from typing import Optional, List, Dict, Any
+from typing import Opfastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-dotenv==1.0.0
+openai==1.6.1
+psycopg2-binary==2.9.9
+pydantic==2.5.0tional, List, Dict, Any
 
 # Load environment variables
 load_dotenv()
