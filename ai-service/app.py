@@ -8,12 +8,7 @@ import os
 import logging
 import random
 from dotenv import load_dotenv
-from typing import Opfastapi==0.104.1
-uvicorn[standard]==0.24.0
-python-dotenv==1.0.0
-openai==1.6.1
-psycopg2-binary==2.9.9
-pydantic==2.5.0tional, List, Dict, Any
+from typing import Optional, List, Dict, Any
 
 # Load environment variables
 load_dotenv()
@@ -37,14 +32,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Database configuration
+# Database configuration - Support both Railway and local
 DB_CONFIG = {
-    "host": os.getenv("DB_HOST", "localhost"),
-    "port": os.getenv("DB_PORT", "5432"),
-    "database": os.getenv("DB_NAME", "customersupportdb"),
-    "user": os.getenv("DB_USER", "support_admin"),
-    "password": os.getenv("DB_PASSWORD", "Ubo@1234")
+    "host": os.getenv("DB_HOST", os.getenv("PGHOST", "localhost")),
+    "port": os.getenv("DB_PORT", os.getenv("PGPORT", "5432")),
+    "database": os.getenv("DB_NAME", os.getenv("PGDATABASE", "customersupportdb")),
+    "user": os.getenv("DB_USER", os.getenv("PGUSER", "support_admin")),
+    "password": os.getenv("DB_PASSWORD", os.getenv("PGPASSWORD", "Ubo@1234"))
 }
+
+logger.info(f"Database config: host={DB_CONFIG['host']}, port={DB_CONFIG['port']}, db={DB_CONFIG['database']}")
 
 def get_db_connection():
     """Get a database connection"""
@@ -589,7 +586,7 @@ if __name__ == "__main__":
     uvicorn.run(
         "app:app",
         host="0.0.0.0",
-        port=8000,
-        reload=True,
+        port=int(os.getenv("PORT", 8000)),
+        reload=False,
         log_level="info"
     )
