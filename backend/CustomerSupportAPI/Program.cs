@@ -11,6 +11,10 @@ using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// 🔧 FIX: Use Railway's PORT or fallback to 8080
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+Console.WriteLine($"🚀 Starting application on port: {port}");
+
 // Configure Serilog
 Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
@@ -20,6 +24,9 @@ Log.Logger = new LoggerConfiguration()
     .CreateLogger();
 
 builder.Host.UseSerilog();
+
+// 🔧 FIX: Use the dynamic port
+builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
 
 // Add services
 builder.Services.AddControllers()
