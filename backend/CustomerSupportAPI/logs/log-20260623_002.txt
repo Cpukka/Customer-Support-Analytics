@@ -1,0 +1,2 @@
+2026-06-23 17:01:36.186 +01:00 [INF] HTTP POST /api/auth/login started at "2026-06-23T16:01:36.1819687Z"
+2026-06-23 17:01:37.093 +01:00 [INF] Login attempt for email: cpukka2@gmail.com
