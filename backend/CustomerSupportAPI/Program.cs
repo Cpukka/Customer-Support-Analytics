@@ -234,8 +234,45 @@ catch
 // Map Controllers
 app.MapControllers();
 
+// Health Check Endpoint (Root)
+app.MapGet("/", () => new { 
+    message = "Customer Support Analytics API",
+    version = "1.0.0",
+    endpoints = new { 
+        health = "/health", 
+        api = "/api",
+        swagger = "/swagger"
+    },
+    timestamp = DateTime.UtcNow
+});
+
 // Health Check Endpoint
-app.MapGet("/health", () => new { status = "healthy", timestamp = DateTime.UtcNow });
+app.MapGet("/health", () => new { 
+    status = "healthy", 
+    timestamp = DateTime.UtcNow,
+    service = "CustomerSupportAPI",
+    environment = app.Environment.EnvironmentName
+});
+
+// Database status endpoint (optional)
+app.MapGet("/db-status", async (ApplicationDbContext dbContext) => {
+    try
+    {
+        var canConnect = await dbContext.Database.CanConnectAsync();
+        return new { 
+            status = canConnect ? "connected" : "disconnected",
+            timestamp = DateTime.UtcNow
+        };
+    }
+    catch (Exception ex)
+    {
+        return new { 
+            status = "error", 
+            error = ex.Message,
+            timestamp = DateTime.UtcNow
+        };
+    }
+});
 
 // Ensure Database is created
 using (var scope = app.Services.CreateScope())
