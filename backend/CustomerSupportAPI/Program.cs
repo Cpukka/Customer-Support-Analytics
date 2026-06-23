@@ -254,26 +254,6 @@ app.MapGet("/health", () => new {
     environment = app.Environment.EnvironmentName
 });
 
-// Database status endpoint (optional)
-app.MapGet("/db-status", async (ApplicationDbContext dbContext) => {
-    try
-    {
-        var canConnect = await dbContext.Database.CanConnectAsync();
-        return new { 
-            status = canConnect ? "connected" : "disconnected",
-            timestamp = DateTime.UtcNow
-        };
-    }
-    catch (Exception ex)
-    {
-        return new { 
-            status = "error", 
-            error = ex.Message,
-            timestamp = DateTime.UtcNow
-        };
-    }
-});
-
 // Ensure Database is created
 using (var scope = app.Services.CreateScope())
 {
