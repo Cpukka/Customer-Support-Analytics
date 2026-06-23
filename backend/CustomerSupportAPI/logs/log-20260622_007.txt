@@ -18,3 +18,9 @@ Object name: 'ApplicationDbContext'.
    at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.EntryWithoutDetectChanges(TEntity entity)
    at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
    at CustomerSupportAPI.Controllers.TicketsController.AnalyzeTicketWithAI(Ticket ticket) in C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\Controllers\TicketsController.cs:line 401
+2026-06-22 18:28:11.089 +01:00 [INF] HTTP GET /health started at "2026-06-22T17:28:11.0893938Z"
+2026-06-22 18:28:11.098 +01:00 [INF] HTTP GET /health completed with 200 in 9.1051ms
+2026-06-22 18:28:11.120 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-22T17:28:11.1207064Z"
+2026-06-22 18:28:18.109 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 200 in 6988.2092ms
+2026-06-22 18:28:18.118 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-22T17:28:18.1184259Z"
+2026-06-22 18:28:18.199 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 200 in 80.9599ms

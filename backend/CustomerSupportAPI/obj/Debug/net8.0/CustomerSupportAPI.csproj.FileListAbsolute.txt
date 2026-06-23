@@ -138,3 +138,5 @@ C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\obj\D
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\obj\Debug\net8.0\ref\CustomerSupportAPI.dll
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\Microsoft.Bcl.Cryptography.dll
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\System.Formats.Asn1.dll
+C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\appsettings.Production.json
+C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\obj\Debug\net8.0\CustomerSupportAPI.sourcelink.json
