@@ -32,7 +32,12 @@ export default function TicketTrendChart({ data }: TicketTrendChartProps) {
           tickFormatter={(value) => value.toFixed(2)}
         />
         <Tooltip 
-          formatter={(value: number) => [value.toFixed(3), 'Sentiment Score']}
+          formatter={(value: any) => {
+            if (typeof value === 'number') {
+              return [value.toFixed(3), 'Sentiment Score'];
+            }
+            return [String(value), ''];
+          }}
           labelFormatter={(label) => `Date: ${label}`}
         />
         <Legend />
