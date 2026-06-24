@@ -1,5 +1,6 @@
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\appsettings.json
+C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\appsettings.Production.json
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\CustomerSupportAPI.staticwebassets.endpoints.json
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\CustomerSupportAPI.exe
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\CustomerSupportAPI.deps.json
@@ -15,6 +16,7 @@ C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\D
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\Microsoft.Bcl.Cryptography.dll
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
@@ -60,6 +62,7 @@ C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\D
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\System.Composition.Hosting.dll
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\System.Composition.Runtime.dll
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\System.Composition.TypedParts.dll
+C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\System.Formats.Asn1.dll
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
@@ -121,6 +124,7 @@ C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\obj\D
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\obj\Debug\net8.0\CustomerSupportAPI.csproj.CoreCompileInputs.cache
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\obj\Debug\net8.0\CustomerSupportAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\obj\Debug\net8.0\CustomerSupportAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\obj\Debug\net8.0\CustomerSupportAPI.sourcelink.json
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\obj\Debug\net8.0\rjimswa.dswa.cache.json
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
@@ -136,7 +140,3 @@ C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\obj\D
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\obj\Debug\net8.0\CustomerSupportAPI.pdb
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\obj\Debug\net8.0\CustomerSupportAPI.genruntimeconfig.cache
 C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\obj\Debug\net8.0\ref\CustomerSupportAPI.dll
-C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\Microsoft.Bcl.Cryptography.dll
-C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\System.Formats.Asn1.dll
-C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\bin\Debug\net8.0\appsettings.Production.json
-C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\obj\Debug\net8.0\CustomerSupportAPI.sourcelink.json

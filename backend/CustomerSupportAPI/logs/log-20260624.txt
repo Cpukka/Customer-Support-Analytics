@@ -337,3 +337,504 @@ POSITION: 84
 2026-06-24 06:08:09.540 +01:00 [INF] HTTP POST /api/auth/login completed with 500 in 493.3845ms
 2026-06-24 06:08:09.545 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/auth/login - 500 null application/json; charset=utf-8 548.9402ms
 2026-06-24 06:09:45.734 +01:00 [INF] Application is shutting down...
+2026-06-24 06:10:02.001 +01:00 [INF] User profile is available. Using 'C:\Users\Chima\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-06-24 06:10:02.192 +01:00 [INF] Now listening on: http://0.0.0.0:8080
+2026-06-24 06:10:02.196 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 06:10:02.199 +01:00 [INF] Hosting environment: Development
+2026-06-24 06:10:02.204 +01:00 [INF] Content root path: C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI
+2026-06-24 06:10:31.750 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:8080/api/auth/login - null null
+2026-06-24 06:10:31.806 +01:00 [INF] CORS policy execution successful.
+2026-06-24 06:10:31.815 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:8080/api/auth/login - 204 null null 64.7798ms
+2026-06-24 06:10:31.834 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/auth/login - application/json 52
+2026-06-24 06:10:32.041 +01:00 [INF] CORS policy execution successful.
+2026-06-24 06:10:32.163 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'hj1TwhnhMx8fOb-lHDCkeNenlku12ZgRlvlIAmxD20Y'. , KeyId: \r\n'.
+Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'.
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-06-24 06:10:32.185 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'hj1TwhnhMx8fOb-lHDCkeNenlku12ZgRlvlIAmxD20Y'. , KeyId: \r\n'.
+Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'.
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-06-24 06:10:32.195 +01:00 [INF] HTTP POST /api/auth/login started at "2026-06-24T05:10:32.1932400Z"
+2026-06-24 06:10:32.206 +01:00 [INF] Executing endpoint 'CustomerSupportAPI.Controllers.AuthController.Login (CustomerSupportAPI)'
+2026-06-24 06:10:32.239 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CustomerSupportAPI.Controllers.LoginRequest) on controller CustomerSupportAPI.Controllers.AuthController (CustomerSupportAPI).
+2026-06-24 06:10:32.286 +01:00 [INF] Login attempt for email: cpukka2@gmail.com
+2026-06-24 06:10:35.259 +01:00 [ERR] Failed executing DbCommand (371ms) [Parameters=[@__request_Email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT c.customer_id, c.company, c.created_at, c.email, c.name, c.updated_at
+FROM support.customers AS c
+WHERE c.email = @__request_Email_0
+LIMIT 1
+2026-06-24 06:10:35.346 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'CustomerSupportAPI.Data.ApplicationDbContext'.
+Npgsql.PostgresException (0x80004005): 42P01: relation "support.customers" does not exist
+
+POSITION: 84
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "support.customers" does not exist
+    Position: 84
+    File: parse_relation.c
+    Line: 1445
+    Routine: parserOpenTable
+Npgsql.PostgresException (0x80004005): 42P01: relation "support.customers" does not exist
+
+POSITION: 84
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "support.customers" does not exist
+    Position: 84
+    File: parse_relation.c
+    Line: 1445
+    Routine: parserOpenTable
+2026-06-24 06:10:35.361 +01:00 [ERR] Login failed for cpukka2@gmail.com
+Npgsql.PostgresException (0x80004005): 42P01: relation "support.customers" does not exist
+
+POSITION: 84
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at CustomerSupportAPI.Controllers.AuthController.Login(LoginRequest request) in C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\Controllers\AuthController.cs:line 98
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "support.customers" does not exist
+    Position: 84
+    File: parse_relation.c
+    Line: 1445
+    Routine: parserOpenTable
+2026-06-24 06:10:35.386 +01:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-24 06:10:35.406 +01:00 [INF] Executed action CustomerSupportAPI.Controllers.AuthController.Login (CustomerSupportAPI) in 3159.2179ms
+2026-06-24 06:10:35.409 +01:00 [INF] Executed endpoint 'CustomerSupportAPI.Controllers.AuthController.Login (CustomerSupportAPI)'
+2026-06-24 06:10:35.411 +01:00 [INF] HTTP POST /api/auth/login completed with 500 in 3218.4351ms
+2026-06-24 06:10:35.427 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/auth/login - 500 null application/json; charset=utf-8 3593.8076ms
+2026-06-24 06:10:43.704 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:8080/api/auth/login - null null
+2026-06-24 06:10:43.721 +01:00 [INF] CORS policy execution successful.
+2026-06-24 06:10:43.724 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:8080/api/auth/login - 204 null null 20.2242ms
+2026-06-24 06:10:43.737 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/auth/login - application/json 52
+2026-06-24 06:10:43.742 +01:00 [INF] CORS policy execution successful.
+2026-06-24 06:10:43.746 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'hj1TwhnhMx8fOb-lHDCkeNenlku12ZgRlvlIAmxD20Y'. , KeyId: \r\n'.
+Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'.
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-06-24 06:10:43.798 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'hj1TwhnhMx8fOb-lHDCkeNenlku12ZgRlvlIAmxD20Y'. , KeyId: \r\n'.
+Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'.
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-06-24 06:10:43.802 +01:00 [INF] HTTP POST /api/auth/login started at "2026-06-24T05:10:43.8029504Z"
+2026-06-24 06:10:43.807 +01:00 [INF] Executing endpoint 'CustomerSupportAPI.Controllers.AuthController.Login (CustomerSupportAPI)'
+2026-06-24 06:10:43.810 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CustomerSupportAPI.Controllers.LoginRequest) on controller CustomerSupportAPI.Controllers.AuthController (CustomerSupportAPI).
+2026-06-24 06:10:43.820 +01:00 [INF] Login attempt for email: cpukka2@gmail.com
+2026-06-24 06:10:44.192 +01:00 [ERR] Failed executing DbCommand (287ms) [Parameters=[@__request_Email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT c.customer_id, c.company, c.created_at, c.email, c.name, c.updated_at
+FROM support.customers AS c
+WHERE c.email = @__request_Email_0
+LIMIT 1
+2026-06-24 06:10:44.196 +01:00 [ERR] An exception occurred while iterating over the results of a query for context type 'CustomerSupportAPI.Data.ApplicationDbContext'.
+Npgsql.PostgresException (0x80004005): 42P01: relation "support.customers" does not exist
+
+POSITION: 84
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "support.customers" does not exist
+    Position: 84
+    File: parse_relation.c
+    Line: 1445
+    Routine: parserOpenTable
+Npgsql.PostgresException (0x80004005): 42P01: relation "support.customers" does not exist
+
+POSITION: 84
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "support.customers" does not exist
+    Position: 84
+    File: parse_relation.c
+    Line: 1445
+    Routine: parserOpenTable
+2026-06-24 06:10:44.212 +01:00 [ERR] Login failed for cpukka2@gmail.com
+Npgsql.PostgresException (0x80004005): 42P01: relation "support.customers" does not exist
+
+POSITION: 84
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at CustomerSupportAPI.Controllers.AuthController.Login(LoginRequest request) in C:\Users\Chima\Desktop\CustomerSupportAnalytics\backend\CustomerSupportAPI\Controllers\AuthController.cs:line 98
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "support.customers" does not exist
+    Position: 84
+    File: parse_relation.c
+    Line: 1445
+    Routine: parserOpenTable
+2026-06-24 06:10:44.227 +01:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-24 06:10:44.230 +01:00 [INF] Executed action CustomerSupportAPI.Controllers.AuthController.Login (CustomerSupportAPI) in 417.0247ms
+2026-06-24 06:10:44.237 +01:00 [INF] Executed endpoint 'CustomerSupportAPI.Controllers.AuthController.Login (CustomerSupportAPI)'
+2026-06-24 06:10:44.239 +01:00 [INF] HTTP POST /api/auth/login completed with 500 in 436.6618ms
+2026-06-24 06:10:44.243 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/auth/login - 500 null application/json; charset=utf-8 506.3123ms
+2026-06-24 06:14:46.347 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:8080/api/auth/login - null null
+2026-06-24 06:14:46.351 +01:00 [INF] CORS policy execution successful.
+2026-06-24 06:14:46.353 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:8080/api/auth/login - 204 null null 5.9039ms
+2026-06-24 06:14:46.364 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/auth/login - application/json 52
+2026-06-24 06:14:46.377 +01:00 [INF] CORS policy execution successful.
+2026-06-24 06:14:46.386 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'hj1TwhnhMx8fOb-lHDCkeNenlku12ZgRlvlIAmxD20Y'. , KeyId: \r\n'.
+Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'.
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-06-24 06:14:46.392 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'hj1TwhnhMx8fOb-lHDCkeNenlku12ZgRlvlIAmxD20Y'. , KeyId: \r\n'.
+Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'.
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-06-24 06:14:46.400 +01:00 [INF] HTTP POST /api/auth/login started at "2026-06-24T05:14:46.4005101Z"
+2026-06-24 06:14:46.403 +01:00 [INF] Executing endpoint 'CustomerSupportAPI.Controllers.AuthController.Login (CustomerSupportAPI)'
+2026-06-24 06:14:46.405 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CustomerSupportAPI.Controllers.LoginRequest) on controller CustomerSupportAPI.Controllers.AuthController (CustomerSupportAPI).
+2026-06-24 06:14:46.410 +01:00 [INF] Login attempt for email: cpukka2@gmail.com
+2026-06-24 06:14:47.981 +01:00 [INF] Executed DbCommand (184ms) [Parameters=[@__request_Email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT c.customer_id, c.company, c.created_at, c.email, c.name, c.updated_at
+FROM support.customers AS c
+WHERE c.email = @__request_Email_0
+LIMIT 1
+2026-06-24 06:14:48.340 +01:00 [INF] User logged in: cpukka2@gmail.com
+2026-06-24 06:14:48.392 +01:00 [INF] Executing OkObjectResult, writing value of type 'CustomerSupportAPI.Controllers.AuthResponse'.
+2026-06-24 06:14:48.400 +01:00 [INF] Executed action CustomerSupportAPI.Controllers.AuthController.Login (CustomerSupportAPI) in 1990.8024ms
+2026-06-24 06:14:48.404 +01:00 [INF] Executed endpoint 'CustomerSupportAPI.Controllers.AuthController.Login (CustomerSupportAPI)'
+2026-06-24 06:14:48.406 +01:00 [INF] HTTP POST /api/auth/login completed with 200 in 2005.5056ms
+2026-06-24 06:14:48.409 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/auth/login - 200 null application/json; charset=utf-8 2044.3455ms
+2026-06-24 06:14:53.030 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/health - null null
+2026-06-24 06:14:53.045 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:8080/api/tickets/analytics - null null
+2026-06-24 06:14:53.225 +01:00 [INF] CORS policy execution successful.
+2026-06-24 06:14:53.233 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:8080/api/tickets/analytics - 204 null null 187.0571ms
+2026-06-24 06:14:53.302 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:8080/api/tickets/analytics - null null
+2026-06-24 06:14:53.336 +01:00 [INF] CORS policy execution successful.
+2026-06-24 06:14:53.351 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:8080/api/tickets/analytics - 204 null null 49.1445ms
+2026-06-24 06:14:53.354 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:8080/api/tickets/analytics - null null
+2026-06-24 06:14:53.354 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:8080/api/tickets/analytics - null null
+2026-06-24 06:14:53.420 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/tickets/analytics - null null
+2026-06-24 06:14:53.425 +01:00 [INF] CORS policy execution successful.
+2026-06-24 06:14:53.440 +01:00 [INF] CORS policy execution successful.
+2026-06-24 06:14:53.453 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:8080/api/tickets/analytics - 204 null null 98.3359ms
+2026-06-24 06:14:53.457 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:8080/api/tickets/analytics - 204 null null 102.4952ms
+2026-06-24 06:14:54.325 +01:00 [INF] CORS policy execution successful.
+2026-06-24 06:14:54.325 +01:00 [INF] CORS policy execution successful.
+2026-06-24 06:14:54.361 +01:00 [INF] HTTP GET /health started at "2026-06-24T05:14:54.3612338Z"
+2026-06-24 06:14:54.371 +01:00 [INF] Executing endpoint 'HTTP: GET /health'
+2026-06-24 06:14:54.552 +01:00 [INF] Executed endpoint 'HTTP: GET /health'
+2026-06-24 06:14:54.555 +01:00 [INF] HTTP GET /health completed with 200 in 193.7871ms
+2026-06-24 06:14:54.559 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/health - 200 null application/json; charset=utf-8 1529.365ms
+2026-06-24 06:14:54.586 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/health - null null
+2026-06-24 06:14:54.621 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-24T05:14:54.6218215Z"
+2026-06-24 06:14:54.645 +01:00 [INF] CORS policy execution successful.
+2026-06-24 06:14:54.673 +01:00 [INF] Executing endpoint 'CustomerSupportAPI.Controllers.TicketsController.GetAnalytics (CustomerSupportAPI)'
+2026-06-24 06:14:54.674 +01:00 [INF] HTTP GET /health started at "2026-06-24T05:14:54.6747453Z"
+2026-06-24 06:14:54.825 +01:00 [INF] Executing endpoint 'HTTP: GET /health'
+2026-06-24 06:14:54.828 +01:00 [INF] Executed endpoint 'HTTP: GET /health'
+2026-06-24 06:14:54.832 +01:00 [INF] HTTP GET /health completed with 200 in 157.2525ms
+2026-06-24 06:14:54.843 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/health - 200 null application/json; charset=utf-8 257.7939ms
+2026-06-24 06:14:55.067 +01:00 [INF] Route matched with {action = "GetAnalytics", controller = "Tickets"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAnalytics() on controller CustomerSupportAPI.Controllers.TicketsController (CustomerSupportAPI).
+2026-06-24 06:14:59.289 +01:00 [INF] Executed DbCommand (929ms) [Parameters=[@__thirtyDaysAgo_0='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT t.ticket_id, t.body, t.created_at, t.customer_id, t.priority, t.status, t.subject, t.updated_at, a.analysis_id, a.category, a.keywords, a.processed_at, a.sentiment_label, a.sentiment_score, a.ticket_id
+FROM support.tickets AS t
+LEFT JOIN support.ai_analysis AS a ON t.ticket_id = a.ticket_id
+WHERE t.created_at >= @__thirtyDaysAgo_0
+2026-06-24 06:14:59.573 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType23`3[[<>f__AnonymousType24`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], CustomerSupportAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Collections.Generic.List`1[[<>f__AnonymousType21`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], CustomerSupportAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[<>f__AnonymousType22`3[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], CustomerSupportAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-24 06:14:59.787 +01:00 [INF] Executed action CustomerSupportAPI.Controllers.TicketsController.GetAnalytics (CustomerSupportAPI) in 4572.1101ms
+2026-06-24 06:14:59.790 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/tickets/analytics - null null
+2026-06-24 06:14:59.794 +01:00 [INF] Executed endpoint 'CustomerSupportAPI.Controllers.TicketsController.GetAnalytics (CustomerSupportAPI)'
+2026-06-24 06:14:59.805 +01:00 [INF] CORS policy execution successful.
+2026-06-24 06:14:59.808 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 200 in 5186.4704ms
+2026-06-24 06:14:59.818 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-24T05:14:59.8184014Z"
+2026-06-24 06:14:59.820 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/tickets/analytics - 200 null application/json; charset=utf-8 6399.3196ms
+2026-06-24 06:14:59.824 +01:00 [INF] Executing endpoint 'CustomerSupportAPI.Controllers.TicketsController.GetAnalytics (CustomerSupportAPI)'
+2026-06-24 06:14:59.833 +01:00 [INF] Route matched with {action = "GetAnalytics", controller = "Tickets"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAnalytics() on controller CustomerSupportAPI.Controllers.TicketsController (CustomerSupportAPI).
+2026-06-24 06:14:59.843 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__thirtyDaysAgo_0='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT t.ticket_id, t.body, t.created_at, t.customer_id, t.priority, t.status, t.subject, t.updated_at, a.analysis_id, a.category, a.keywords, a.processed_at, a.sentiment_label, a.sentiment_score, a.ticket_id
+FROM support.tickets AS t
+LEFT JOIN support.ai_analysis AS a ON t.ticket_id = a.ticket_id
+WHERE t.created_at >= @__thirtyDaysAgo_0
+2026-06-24 06:14:59.856 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType23`3[[<>f__AnonymousType24`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], CustomerSupportAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Collections.Generic.List`1[[<>f__AnonymousType21`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], CustomerSupportAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[<>f__AnonymousType22`3[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], CustomerSupportAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-24 06:14:59.866 +01:00 [INF] Executed action CustomerSupportAPI.Controllers.TicketsController.GetAnalytics (CustomerSupportAPI) in 27.8405ms
+2026-06-24 06:14:59.868 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/tickets/analytics - null null
+2026-06-24 06:14:59.871 +01:00 [INF] Executed endpoint 'CustomerSupportAPI.Controllers.TicketsController.GetAnalytics (CustomerSupportAPI)'
+2026-06-24 06:14:59.884 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 200 in 65.6448ms
+2026-06-24 06:14:59.875 +01:00 [INF] CORS policy execution successful.
+2026-06-24 06:14:59.900 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/tickets/analytics - 200 null application/json; charset=utf-8 100.6258ms
+2026-06-24 06:14:59.965 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-24T05:14:59.9632630Z"
+2026-06-24 06:15:00.019 +01:00 [INF] Executing endpoint 'CustomerSupportAPI.Controllers.TicketsController.GetAnalytics (CustomerSupportAPI)'
+2026-06-24 06:15:00.033 +01:00 [INF] Route matched with {action = "GetAnalytics", controller = "Tickets"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAnalytics() on controller CustomerSupportAPI.Controllers.TicketsController (CustomerSupportAPI).
+2026-06-24 06:15:00.137 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__thirtyDaysAgo_0='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT t.ticket_id, t.body, t.created_at, t.customer_id, t.priority, t.status, t.subject, t.updated_at, a.analysis_id, a.category, a.keywords, a.processed_at, a.sentiment_label, a.sentiment_score, a.ticket_id
+FROM support.tickets AS t
+LEFT JOIN support.ai_analysis AS a ON t.ticket_id = a.ticket_id
+WHERE t.created_at >= @__thirtyDaysAgo_0
+2026-06-24 06:15:00.147 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType23`3[[<>f__AnonymousType24`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], CustomerSupportAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Collections.Generic.List`1[[<>f__AnonymousType21`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], CustomerSupportAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[<>f__AnonymousType22`3[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], CustomerSupportAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-24 06:15:00.153 +01:00 [INF] Executed action CustomerSupportAPI.Controllers.TicketsController.GetAnalytics (CustomerSupportAPI) in 19.8307ms
+2026-06-24 06:15:00.159 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/tickets/analytics - null null
+2026-06-24 06:15:00.168 +01:00 [INF] Executed endpoint 'CustomerSupportAPI.Controllers.TicketsController.GetAnalytics (CustomerSupportAPI)'
+2026-06-24 06:15:00.172 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 200 in 209.6588ms
+2026-06-24 06:15:00.171 +01:00 [INF] CORS policy execution successful.
+2026-06-24 06:15:00.183 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/tickets/analytics - 200 null application/json; charset=utf-8 313.8419ms
+2026-06-24 06:15:00.189 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-24T05:15:00.1897268Z"
+2026-06-24 06:15:00.210 +01:00 [INF] Executing endpoint 'CustomerSupportAPI.Controllers.TicketsController.GetAnalytics (CustomerSupportAPI)'
+2026-06-24 06:15:00.216 +01:00 [INF] Route matched with {action = "GetAnalytics", controller = "Tickets"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAnalytics() on controller CustomerSupportAPI.Controllers.TicketsController (CustomerSupportAPI).
+2026-06-24 06:15:00.224 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__thirtyDaysAgo_0='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT t.ticket_id, t.body, t.created_at, t.customer_id, t.priority, t.status, t.subject, t.updated_at, a.analysis_id, a.category, a.keywords, a.processed_at, a.sentiment_label, a.sentiment_score, a.ticket_id
+FROM support.tickets AS t
+LEFT JOIN support.ai_analysis AS a ON t.ticket_id = a.ticket_id
+WHERE t.created_at >= @__thirtyDaysAgo_0
+2026-06-24 06:15:00.230 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType23`3[[<>f__AnonymousType24`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], CustomerSupportAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Collections.Generic.List`1[[<>f__AnonymousType21`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], CustomerSupportAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[<>f__AnonymousType22`3[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], CustomerSupportAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-24 06:15:00.235 +01:00 [INF] Executed action CustomerSupportAPI.Controllers.TicketsController.GetAnalytics (CustomerSupportAPI) in 14.0363ms
+2026-06-24 06:15:00.239 +01:00 [INF] Executed endpoint 'CustomerSupportAPI.Controllers.TicketsController.GetAnalytics (CustomerSupportAPI)'
+2026-06-24 06:15:00.241 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 200 in 51.5958ms
+2026-06-24 06:15:00.245 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/tickets/analytics - 200 null application/json; charset=utf-8 89.0517ms
+2026-06-24 07:28:31.740 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:8080/api/auth/login - null null
+2026-06-24 07:28:31.747 +01:00 [INF] CORS policy execution successful.
+2026-06-24 07:28:31.755 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:8080/api/auth/login - 204 null null 14.3673ms
+2026-06-24 07:28:31.764 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/auth/login - application/json 52
+2026-06-24 07:28:31.772 +01:00 [INF] CORS policy execution successful.
+2026-06-24 07:28:31.775 +01:00 [INF] HTTP POST /api/auth/login started at "2026-06-24T06:28:31.7758240Z"
+2026-06-24 07:28:31.779 +01:00 [INF] Executing endpoint 'CustomerSupportAPI.Controllers.AuthController.Login (CustomerSupportAPI)'
+2026-06-24 07:28:31.785 +01:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(CustomerSupportAPI.Controllers.LoginRequest) on controller CustomerSupportAPI.Controllers.AuthController (CustomerSupportAPI).
+2026-06-24 07:28:31.790 +01:00 [INF] Login attempt for email: cpukka2@gmail.com
+2026-06-24 07:28:33.290 +01:00 [INF] Executed DbCommand (799ms) [Parameters=[@__request_Email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT c.customer_id, c.company, c.created_at, c.email, c.name, c.updated_at
+FROM support.customers AS c
+WHERE c.email = @__request_Email_0
+LIMIT 1
+2026-06-24 07:28:33.294 +01:00 [INF] User logged in: cpukka2@gmail.com
+2026-06-24 07:28:33.298 +01:00 [INF] Executing OkObjectResult, writing value of type 'CustomerSupportAPI.Controllers.AuthResponse'.
+2026-06-24 07:28:33.304 +01:00 [INF] Executed action CustomerSupportAPI.Controllers.AuthController.Login (CustomerSupportAPI) in 1516.1782ms
+2026-06-24 07:28:33.307 +01:00 [INF] Executed endpoint 'CustomerSupportAPI.Controllers.AuthController.Login (CustomerSupportAPI)'
+2026-06-24 07:28:33.310 +01:00 [INF] HTTP POST /api/auth/login completed with 200 in 1534.7575ms
+2026-06-24 07:28:33.314 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/auth/login - 200 null application/json; charset=utf-8 1550.0361ms
+2026-06-24 07:28:34.023 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/health - null null
+2026-06-24 07:28:34.045 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:8080/api/tickets/analytics - null null
+2026-06-24 07:28:34.078 +01:00 [INF] CORS policy execution successful.
+2026-06-24 07:28:34.089 +01:00 [INF] CORS policy execution successful.
+2026-06-24 07:28:34.091 +01:00 [INF] HTTP GET /health started at "2026-06-24T06:28:34.0912476Z"
+2026-06-24 07:28:34.092 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:8080/api/tickets/analytics - 204 null null 47.1932ms
+2026-06-24 07:28:34.097 +01:00 [INF] Executing endpoint 'HTTP: GET /health'
+2026-06-24 07:28:34.109 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:8080/api/tickets/analytics - null null
+2026-06-24 07:28:34.111 +01:00 [INF] Executed endpoint 'HTTP: GET /health'
+2026-06-24 07:28:34.116 +01:00 [INF] CORS policy execution successful.
+2026-06-24 07:28:34.123 +01:00 [INF] HTTP GET /health completed with 200 in 32.0994ms
+2026-06-24 07:28:34.124 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:8080/api/tickets/analytics - 204 null null 15.5835ms
+2026-06-24 07:28:34.127 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/health - 200 null application/json; charset=utf-8 104.0543ms
+2026-06-24 07:28:34.141 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:8080/api/tickets/analytics - null null
+2026-06-24 07:28:34.157 +01:00 [INF] CORS policy execution successful.
+2026-06-24 07:28:34.148 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:8080/api/tickets/analytics - null null
+2026-06-24 07:28:34.161 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:8080/api/tickets/analytics - 204 null null 19.6789ms
+2026-06-24 07:28:34.183 +01:00 [INF] CORS policy execution successful.
+2026-06-24 07:28:34.199 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/tickets/analytics - null null
+2026-06-24 07:28:34.204 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:8080/api/tickets/analytics - 204 null null 56.0119ms
+2026-06-24 07:28:34.209 +01:00 [INF] CORS policy execution successful.
+2026-06-24 07:28:34.215 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/health - null null
+2026-06-24 07:28:34.219 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-24T06:28:34.2198795Z"
+2026-06-24 07:28:34.222 +01:00 [INF] CORS policy execution successful.
+2026-06-24 07:28:34.225 +01:00 [INF] Executing endpoint 'CustomerSupportAPI.Controllers.TicketsController.GetAnalytics (CustomerSupportAPI)'
+2026-06-24 07:28:34.226 +01:00 [INF] HTTP GET /health started at "2026-06-24T06:28:34.2261927Z"
+2026-06-24 07:28:34.227 +01:00 [INF] Route matched with {action = "GetAnalytics", controller = "Tickets"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAnalytics() on controller CustomerSupportAPI.Controllers.TicketsController (CustomerSupportAPI).
+2026-06-24 07:28:34.229 +01:00 [INF] Executing endpoint 'HTTP: GET /health'
+2026-06-24 07:28:34.235 +01:00 [INF] Executed endpoint 'HTTP: GET /health'
+2026-06-24 07:28:34.240 +01:00 [INF] HTTP GET /health completed with 200 in 14.3868ms
+2026-06-24 07:28:34.243 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/health - 200 null application/json; charset=utf-8 27.7346ms
+2026-06-24 07:28:34.636 +01:00 [INF] Executed DbCommand (396ms) [Parameters=[@__thirtyDaysAgo_0='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT t.ticket_id, t.body, t.created_at, t.customer_id, t.priority, t.status, t.subject, t.updated_at, a.analysis_id, a.category, a.keywords, a.processed_at, a.sentiment_label, a.sentiment_score, a.ticket_id
+FROM support.tickets AS t
+LEFT JOIN support.ai_analysis AS a ON t.ticket_id = a.ticket_id
+WHERE t.created_at >= @__thirtyDaysAgo_0
+2026-06-24 07:28:34.646 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType23`3[[<>f__AnonymousType24`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], CustomerSupportAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Collections.Generic.List`1[[<>f__AnonymousType21`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], CustomerSupportAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[<>f__AnonymousType22`3[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], CustomerSupportAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-24 07:28:34.655 +01:00 [INF] Executed action CustomerSupportAPI.Controllers.TicketsController.GetAnalytics (CustomerSupportAPI) in 423.0778ms
+2026-06-24 07:28:34.657 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/tickets/analytics - null null
+2026-06-24 07:28:34.659 +01:00 [INF] Executed endpoint 'CustomerSupportAPI.Controllers.TicketsController.GetAnalytics (CustomerSupportAPI)'
+2026-06-24 07:28:34.663 +01:00 [INF] CORS policy execution successful.
+2026-06-24 07:28:34.665 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 200 in 445.2424ms
+2026-06-24 07:28:34.667 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-24T06:28:34.6675115Z"
+2026-06-24 07:28:34.677 +01:00 [INF] Executing endpoint 'CustomerSupportAPI.Controllers.TicketsController.GetAnalytics (CustomerSupportAPI)'
+2026-06-24 07:28:34.673 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/tickets/analytics - 200 null application/json; charset=utf-8 473.4862ms
+2026-06-24 07:28:34.679 +01:00 [INF] Route matched with {action = "GetAnalytics", controller = "Tickets"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAnalytics() on controller CustomerSupportAPI.Controllers.TicketsController (CustomerSupportAPI).
+2026-06-24 07:28:34.707 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__thirtyDaysAgo_0='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT t.ticket_id, t.body, t.created_at, t.customer_id, t.priority, t.status, t.subject, t.updated_at, a.analysis_id, a.category, a.keywords, a.processed_at, a.sentiment_label, a.sentiment_score, a.ticket_id
+FROM support.tickets AS t
+LEFT JOIN support.ai_analysis AS a ON t.ticket_id = a.ticket_id
+WHERE t.created_at >= @__thirtyDaysAgo_0
+2026-06-24 07:28:34.714 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType23`3[[<>f__AnonymousType24`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], CustomerSupportAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Collections.Generic.List`1[[<>f__AnonymousType21`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], CustomerSupportAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[<>f__AnonymousType22`3[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], CustomerSupportAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-24 07:28:34.721 +01:00 [INF] Executed action CustomerSupportAPI.Controllers.TicketsController.GetAnalytics (CustomerSupportAPI) in 17.1628ms
+2026-06-24 07:28:34.723 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/tickets/analytics - null null
+2026-06-24 07:28:34.725 +01:00 [INF] Executed endpoint 'CustomerSupportAPI.Controllers.TicketsController.GetAnalytics (CustomerSupportAPI)'
+2026-06-24 07:28:34.730 +01:00 [INF] CORS policy execution successful.
+2026-06-24 07:28:34.731 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 200 in 64.0962ms
+2026-06-24 07:28:34.736 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-24T06:28:34.7367045Z"
+2026-06-24 07:28:34.741 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/tickets/analytics - 200 null application/json; charset=utf-8 84.5198ms
+2026-06-24 07:28:34.770 +01:00 [INF] Executing endpoint 'CustomerSupportAPI.Controllers.TicketsController.GetAnalytics (CustomerSupportAPI)'
+2026-06-24 07:28:34.779 +01:00 [INF] Route matched with {action = "GetAnalytics", controller = "Tickets"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAnalytics() on controller CustomerSupportAPI.Controllers.TicketsController (CustomerSupportAPI).
+2026-06-24 07:28:34.789 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__thirtyDaysAgo_0='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT t.ticket_id, t.body, t.created_at, t.customer_id, t.priority, t.status, t.subject, t.updated_at, a.analysis_id, a.category, a.keywords, a.processed_at, a.sentiment_label, a.sentiment_score, a.ticket_id
+FROM support.tickets AS t
+LEFT JOIN support.ai_analysis AS a ON t.ticket_id = a.ticket_id
+WHERE t.created_at >= @__thirtyDaysAgo_0
+2026-06-24 07:28:34.795 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType23`3[[<>f__AnonymousType24`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], CustomerSupportAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Collections.Generic.List`1[[<>f__AnonymousType21`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], CustomerSupportAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[<>f__AnonymousType22`3[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], CustomerSupportAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-24 07:28:34.805 +01:00 [INF] Executed action CustomerSupportAPI.Controllers.TicketsController.GetAnalytics (CustomerSupportAPI) in 18.868ms
+2026-06-24 07:28:34.810 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/tickets/analytics - null null
+2026-06-24 07:28:34.812 +01:00 [INF] Executed endpoint 'CustomerSupportAPI.Controllers.TicketsController.GetAnalytics (CustomerSupportAPI)'
+2026-06-24 07:28:34.815 +01:00 [INF] CORS policy execution successful.
+2026-06-24 07:28:34.817 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 200 in 80.2937ms
+2026-06-24 07:28:34.819 +01:00 [INF] HTTP GET /api/tickets/analytics started at "2026-06-24T06:28:34.8194653Z"
+2026-06-24 07:28:34.821 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/tickets/analytics - 200 null application/json; charset=utf-8 98.7086ms
+2026-06-24 07:28:34.824 +01:00 [INF] Executing endpoint 'CustomerSupportAPI.Controllers.TicketsController.GetAnalytics (CustomerSupportAPI)'
+2026-06-24 07:28:34.830 +01:00 [INF] Route matched with {action = "GetAnalytics", controller = "Tickets"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAnalytics() on controller CustomerSupportAPI.Controllers.TicketsController (CustomerSupportAPI).
+2026-06-24 07:28:34.837 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__thirtyDaysAgo_0='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT t.ticket_id, t.body, t.created_at, t.customer_id, t.priority, t.status, t.subject, t.updated_at, a.analysis_id, a.category, a.keywords, a.processed_at, a.sentiment_label, a.sentiment_score, a.ticket_id
+FROM support.tickets AS t
+LEFT JOIN support.ai_analysis AS a ON t.ticket_id = a.ticket_id
+WHERE t.created_at >= @__thirtyDaysAgo_0
+2026-06-24 07:28:34.843 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType23`3[[<>f__AnonymousType24`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], CustomerSupportAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[System.Collections.Generic.List`1[[<>f__AnonymousType21`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], CustomerSupportAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[<>f__AnonymousType22`3[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], CustomerSupportAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-06-24 07:28:34.847 +01:00 [INF] Executed action CustomerSupportAPI.Controllers.TicketsController.GetAnalytics (CustomerSupportAPI) in 13.3113ms
+2026-06-24 07:28:34.850 +01:00 [INF] Executed endpoint 'CustomerSupportAPI.Controllers.TicketsController.GetAnalytics (CustomerSupportAPI)'
+2026-06-24 07:28:34.851 +01:00 [INF] HTTP GET /api/tickets/analytics completed with 200 in 31.8004ms
+2026-06-24 07:28:34.854 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/tickets/analytics - 200 null application/json; charset=utf-8 43.385ms
+2026-06-24 07:35:48.964 +01:00 [INF] Application is shutting down...
+2026-06-24 07:39:29.548 +01:00 [INF] Executed DbCommand (460ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2026-06-24 07:39:31.815 +01:00 [INF] Executed DbCommand (270ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2026-06-24 07:39:35.336 +01:00 [INF] Executed DbCommand (287ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2026-06-24 07:39:37.715 +01:00 [INF] Executed DbCommand (280ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2026-06-24 07:39:38.049 +01:00 [INF] Executed DbCommand (324ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-06-24 07:39:38.100 +01:00 [INF] Applying migration '20260622154018_AddCustomersTable'.
+2026-06-24 07:39:38.679 +01:00 [INF] Executed DbCommand (356ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DO $EF$
+BEGIN
+    IF NOT EXISTS(SELECT 1 FROM pg_namespace WHERE nspname = 'support') THEN
+        CREATE SCHEMA support;
+    END IF;
+END $EF$;
+2026-06-24 07:39:39.150 +01:00 [ERR] Failed executing DbCommand (462ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE support.customers (
+    customer_id integer GENERATED BY DEFAULT AS IDENTITY,
+    name character varying(100) NOT NULL,
+    email character varying(255) NOT NULL,
+    company character varying(100),
+    created_at timestamp with time zone NOT NULL DEFAULT (CURRENT_TIMESTAMP),
+    updated_at timestamp with time zone NOT NULL DEFAULT (CURRENT_TIMESTAMP),
+    CONSTRAINT "PK_customers" PRIMARY KEY (customer_id)
+);
