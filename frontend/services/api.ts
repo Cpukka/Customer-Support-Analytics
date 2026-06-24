@@ -2,10 +2,17 @@ import axios from 'axios';
 import { UploadTicketRequest } from '@/types';
 
 // Use environment variable or fallback
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+// Check if we're in production (Railway) based on the URL
+const isProduction = typeof window !== 'undefined' && window.location.hostname !== 'localhost';
+
+// Use Railway URL if in production, otherwise use environment variable or localhost
+const API_BASE_URL = isProduction 
+    ? 'https://customer-support-analytics-production.up.railway.app'
+    : process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
 
 console.log('🌐 NEXT_PUBLIC_API_URL:', process.env.NEXT_PUBLIC_API_URL);
 console.log('🌐 API Base URL:', API_BASE_URL);
+console.log('🌐 Is Production:', isProduction);
 
 // API client for all endpoints
 const apiClient = axios.create({
@@ -24,6 +31,8 @@ const healthClient = axios.create({
   },
   timeout: 5000,
 });
+
+// ... rest of your code stays the same ...
 
 // Request interceptor for logging
 apiClient.interceptors.request.use(
